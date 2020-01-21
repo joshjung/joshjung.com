@@ -1,0 +1,36 @@
+{
+  "name": "joshjung.com",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "webpack --config config/webpack.config.dev.js",
+    "dev": "webpack-dev-server --config config/webpack.config.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/joshjung/joshjung.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshjung/joshjung.com/issues"
+  },
+  "homepage": "https://github.com/joshjung/joshjung.com#readme",
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.5",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "vue-loader": "^15.8.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
