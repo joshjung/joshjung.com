@@ -14,13 +14,37 @@ module.exports = {
   entry: [
     './src/app.js'
   ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
+    extensions: ['*', '.js', '.vue', '.json']
+  },
   module: {
     rules: [
       {
         test: /\.vue$/,
         use: 'vue-loader'
+      },
+      {
+        test: /\.js$/,
+        use: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
+  },
+  devServer: {
+    hot: true,
+    watchOptions: {
+      poll: true
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
